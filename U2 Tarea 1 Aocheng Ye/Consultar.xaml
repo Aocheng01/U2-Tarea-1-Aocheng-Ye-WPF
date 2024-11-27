@@ -79,7 +79,7 @@
     </UserControl.Resources>
 
     <Grid Background="#4d5061" >
-        <Label Style="{DynamicResource LabelStyle1}"  Content="Datos del libro: " HorizontalAlignment="Left" Margin="27,234,0,0" VerticalAlignment="Top" Height="49" Width="237"/>
+        <Label Style="{DynamicResource LabelStyle1}"  Content="Datos del Libro: " HorizontalAlignment="Left" Margin="27,234,0,0" VerticalAlignment="Top" Height="49" Width="237"/>
         <Label  Style="{DynamicResource LabelStyle1}" Content="Título" HorizontalAlignment="Left" Margin="27,313,0,0" VerticalAlignment="Top" Height="44" Width="129"/>
         <Label   Style="{DynamicResource LabelStyle1}" Content="Editorial" HorizontalAlignment="Left" Margin="30,402,0,0" VerticalAlignment="Top" Height="62" Width="160"/>
         <Label  Style="{DynamicResource LabelStyle1}"  Content="Descripción" HorizontalAlignment="Left" Margin="27,485,0,0" VerticalAlignment="Top" Height="46" Width="188"/>
