@@ -57,7 +57,17 @@ namespace U2_Tarea_1_Aocheng_Ye
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            Close();
+            MessageBoxResult respuesta = MessageBox.Show(
+              "Estás seguro de que quieres salir?",
+              "Confirmar salida",
+              MessageBoxButton.YesNo,
+              MessageBoxImage.Warning);
+
+            if (respuesta == MessageBoxResult.Yes)
+            {
+                Close();
+            }
+
         }
     }
-}
+}   

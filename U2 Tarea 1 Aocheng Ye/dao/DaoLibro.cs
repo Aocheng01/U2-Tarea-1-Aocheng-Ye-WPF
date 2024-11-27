@@ -192,7 +192,7 @@ namespace U2_Tarea_1_Aocheng_Ye.dao
             }
         }
 
-        public void eliminarLibro(int id, Libro libro)
+        public void eliminarLibro(int id)
         {
             try
             {

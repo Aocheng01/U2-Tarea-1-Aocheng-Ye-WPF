@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:U2_Tarea_1_Aocheng_Ye"
-             mc:Ignorable="d" 
+             xmlns:local="clr-namespace:U2_Tarea_1_Aocheng_Ye" 
              mc:Ignorable="d" Height="708" Width="1442">
     <UserControl.Resources>
         <Style x:Key="LabelStyle1" TargetType="{x:Type Label}">
@@ -97,7 +96,7 @@
         <TextBox Style="{DynamicResource TextBoxStyle1}"  x:Name="txtBoxImagen" HorizontalAlignment="Left" Margin="1272,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="39"/>
         <DatePicker x:Name="dataPickerFecha" HorizontalAlignment="Left" Margin="798,409,0,0" VerticalAlignment="Top" Width="326" FontSize="22"/>
         <CheckBox x:Name="checkBoxVenta" Content="En venta?" HorizontalAlignment="Left" Margin="1018,662,0,0" VerticalAlignment="Top" Height="36" Width="149" FontSize="25"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="262,80,0,0" VerticalAlignment="Top" Height="44" Width="184"/>
+        <Button Content="Consultar" HorizontalAlignment="Left" Margin="262,84,0,0" VerticalAlignment="Top" Height="44" Width="184" Click="Button_Click"/>
         <Label Style="{DynamicResource LabelStyle1}" Content="ID" HorizontalAlignment="Left" Margin="21,38,0,0" VerticalAlignment="Top" Height="44" Width="91" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -109,8 +108,10 @@
             </Label.RenderTransform>
         </Label>
         <Label Style="{DynamicResource LabelStyle1}" Content="Título" HorizontalAlignment="Left" Margin="19,88,0,0" VerticalAlignment="Top" Height="46" Width="91"/>
-        <TextBox Style="{DynamicResource TextBoxStyle1}" HorizontalAlignment="Left" Margin="110,51,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="126" Height="25"/>
-        <TextBox HorizontalAlignment="Left" Margin="114,98,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="124" Height="26"/>
+        <TextBox Name="txtBoxID" Style="{DynamicResource TextBoxStyle1}" HorizontalAlignment="Left" Margin="114,49,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126" Height="25"/>
+        <TextBox Name="textBoxBuscarTitulo"  Style="{DynamicResource TextBoxStyle1}" HorizontalAlignment="Left" Margin="114,98,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="124" Height="26"/>
+        <Button Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="488,84,0,0" VerticalAlignment="Top" Height="48" Width="176" Click="btnModificar_Click" Visibility="Hidden"/>
+        <Button Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="701,84,0,0" VerticalAlignment="Top" Height="48" Width="176" Click="btnEliminar_Click" Visibility="Hidden"/>
 
     </Grid>
 </UserControl>
