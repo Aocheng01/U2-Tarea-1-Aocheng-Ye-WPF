@@ -30,18 +30,28 @@ namespace U2_Tarea_1_Aocheng_Ye
         private void btnAnadir_Click(object sender, RoutedEventArgs e)
         {
             bool datosValidos = true;
+            if (string.IsNullOrEmpty(txtBoxTitulo.Text) || string.IsNullOrEmpty(txtBoxAutor.Text) || string.IsNullOrEmpty(txtBoxPrecio.Text) || string.IsNullOrEmpty(txtBoxUnidades.Text))
+            {
+                MessageBox.Show("Se ha producido un error.\nLos campos título, autor, precio y unidades son obligatorios.");
+                datosValidos = false;
+            }
             if (string.IsNullOrEmpty(txtBoxTitulo.Text))
             {
-                MessageBox.Show("Se ha producido un error.\nLos campos título y autor son obligatorios.");
-                txtBoxTitulo.Background=Brushes.Red;
-                datosValidos = false;
+                txtBoxTitulo.Background = Brushes.Red;
             }
             if (string.IsNullOrEmpty(txtBoxAutor.Text))
             {
-                MessageBox.Show("Se ha producido un error.\nLos campos título y autor son obligatorios.");
                 txtBoxAutor.Background = Brushes.Red;
-                datosValidos = false;
             }
+            if (string.IsNullOrEmpty(txtBoxPrecio.Text))
+            {
+                txtBoxPrecio.Background = Brushes.Red;
+            }
+            if (string.IsNullOrEmpty(txtBoxUnidades.Text))
+            {
+                txtBoxUnidades.Background = Brushes.Red;
+            }
+
             Boolean enVenta = false;
             if (checkBoxVenta.IsChecked == true) { 
                        enVenta = true;
@@ -72,6 +82,18 @@ namespace U2_Tarea_1_Aocheng_Ye
                 );
                 DaoLibro daoLibro = new DaoLibro();
                 daoLibro.insertarLibro(nuevoLibro);
+                txtBoxTitulo.Clear();
+                txtBoxAutor.Clear();
+                txtBoxEditorial.Clear();
+                txtBoxDescripcion.Clear();
+                txtBoxImagen.Clear();
+                txtBoxPrecio.Clear();
+                txtBoxUnidades.Clear();
+                dataPickerFecha.SelectedDate = DateTime.Now;
+                checkBoxVenta.IsChecked = false;
+
+
+
             }
         }
     }

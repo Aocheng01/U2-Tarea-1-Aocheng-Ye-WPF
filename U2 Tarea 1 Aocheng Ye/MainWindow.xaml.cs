@@ -19,6 +19,7 @@ namespace U2_Tarea_1_Aocheng_Ye
         public MainWindow()
         {
             InitializeComponent();
+            AbrirWindowEnPanel(new Principal());
         }
 
         private void AbrirWindowEnPanel(UserControl panelacargar)
